@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Harman Brar</title>
+    <link rel="icon" href="images/circle.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create four equal columns that sits next to each other */
+      .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
+
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .fade {
+
+          opacity: 1;
+        }
+    </style>
+    <script>
+      $(window).on("load",function() {
+      $(window).scroll(function() {
+      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+      $(".fade").each(function() {
+        /* Check the location of each desired element */
+        var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+        /* If the element is completely within bounds of the window, fade it in */
+        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+          if ($(this).css("opacity")==0) {$(this).fadeTo(400,1);}
+        } else { //object goes out of view (scrolling up)
+          if ($(this).css("opacity")==1) {$(this).fadeTo(400,0);}
+        }
+      });
+      }).scroll(); //invoke scroll-handler on page-load
+      });
+    </script>
+  </head>
+  <!-- Header ===================================================================== -->
+  <header class="cd-header">
+    <div class="header-wrapper">
+      <div class="logo-wrap">
+        <a  style="text-shadow: 1px 1px 1px black;" href="#" style="z-index:1;"class="hover-target">Portfolio</a>
+      </div>
+      <div class="nav-but-wrap">
+        <div class="menu-icon hover-target">
+          <span class="menu-icon__line menu-icon__line-left"></span>
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Nav ===================================================================== -->
+  <div style="position:relative !important; padding-top:0px; margin-top:-15px; z-index: 9;" class="nav">
+    <div    class="nav__content">
+      <ul   class="nav__list">
+        <li class="nav__list-item"><a href="index.html" class="hover-target">home</a></li>
+        <li class="nav__list-item active-nav"><a href="portfolio.html" class="hover-target">Portfolio</a></li>
+        <li class="nav__list-item"><a href="about.html" class="hover-target">About</a></li>
+        <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <body class=" container-portfolio light" style="overflow-y:visible; ">
+    <div   class="section full-height over-hide container-portfolio ">
+        <div style="padding-left: 7%;" class="">
+          <h1 Style="margin-top:100px;" class="fade header-portfolio">Designed</h1>
+            <div class="">
+              <div class=" row">
+                <div class=" column">
+                  
+                  <div class=" fade container">
+                      <img class="image" src="images/poster-art.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Show Promotion Poster</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/logo-a.jpg">
+                      <div class="overlay-img">
+                        <div class="text">AA Logo</div>
+                      </div>
+                  </div>
+                  <!-- <div class="fade container">
+                      <img class="image" src="images/logo-k.jpg">
+                      <div class="overlay-img">
+                        <div class="text">K Logo</div>
+                      </div>
+                  </div>  
+                  <div class="fade container">
+                      <img class="image" src="images/logo-how.jpg">
+                      <div class="overlay-img">
+                        <div class="text">House of Wrap Logo</div>
+                      </div>
+                  </div>-->
+                  <div class="fade container">
+                      <img class="image" src="images/logo-drop.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Actually Milk Logo</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/graphics-bug.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Graphic Designed</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="downloadable/Panda.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Car wrap</div>
+                    </div>
+                </div>
+                  <div class="  container">
+                    <a href="http://houseofwrap.com/" target="_blank">
+                      <img class="image" src="images/image-web-crayators.jpg">
+                      <div class="overlay-img">
+                        <div class="text">www.crayators.com<br><p style="font-size:10px;">(Yet To Be Launched)</p></div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                    <a href="http://www.dscarclinic.ca/" target="_blank">
+                      <img class="image" src="images/image-web-dcs.png">
+                      <div class="overlay-img">
+                        <div class="text">www.dscarclinic.ca<br ><p style="font-size:10px;">(Yet To Be Launched)</p></div>
+                      </div>
+                    </a>
+                  </div>
+                   
+                  <div class="fade container">
+                      <img class="image" src="images/design/19ninetyfives_web_forIG.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Web Design </div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/design/500off_1 copy.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Social Media Post for Giveaway </div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/circle_illusion_black_noshadow_og_3.png">
+                    <div class="overlay-img">
+                      <div class="text">Logo for @HundredThousandStreets </div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/custom_stripe_2.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Ad for Racing Stripes</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/DSC_0803.jpg">
+                    <div class="overlay-img">
+                      <div class="text">House of Wrap Badges</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/Ethius_Logo_Template_redisgn_full.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Ethius Security Protection Logo</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/DSC_0808.jpg">
+                    <div class="overlay-img">
+                      <div class="text">House of Wrap Uniform Design</div>
+                    </div>
+                  </div>
+                   
+                  <div class="fade container">
+                    <img class="image" src="images/poster-shoe.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Mock Anta Shoe Poster </div>
+                    </div>
+                </div>
+                 
+                <div class="fade container">
+                  <img class="image" src="images/logo-w.jpg">
+                  <div class="overlay-img">
+                    <div class="text">W Logo</div>
+                  </div>
+              </div>
+
+                </div>
+                <div class="column">
+                  <div class="fade container">
+                    <img class="image" src="images/poster-milk.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Actually Milk Poster</div>
+                    </div>
+                </div>
+                <div class="fade container">
+                  <img class="image" src="images/poster-how.jpg">
+                  <div class="overlay-img">
+                    <div class="text">The House of Wrap Promotional Poster</div>
+                  </div>
+              </div>
+              <div class="fade container">
+                <a href="#" target="_blank">
+                  <img class="image" src="images/image-web-a.png">
+                  <div class="overlay-img">
+                    <div class="text">www.antionioantwellaa.com</div>
+                  </div>
+                </a>
+              </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/MergePainting_MockUp_LogoDesign_V1-1.png">
+                    <div class="overlay-img">
+                      <div class="text">Merge Painting Logo</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/MergePainting_MockUp_LogoDesign_V2.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Alt Merge Painting Logo</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/oldman_houseofwrap.png">
+                    <div class="overlay-img">
+                      <div class="text">Uniform Design</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/snake_tv_3.png">
+                    <div class="overlay-img">
+                      <div class="text"></div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/snake2.jpg">
+                    <div class="overlay-img">
+                      <div class="text">@theSofound Logo</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/Supreme_wallpaper_v2 copy.png">
+                    <div class="overlay-img">
+                      <div class="text">Facebook Wallpaper</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/logo-btn.png">
+                      <div class="overlay-img">
+                        <div class="text">BTN Construction</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/poster-joker.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Graphic Designed</div>
+                      </div>
+                  </div>
+                   
+                  <!--<div class="fade container">
+                      <img class="image" src="images/logo-7.jpg">
+                      <div class="overlay-img">
+                        <div class="text">7 Logo</div>
+                      </div>
+                  </div> -->
+                  <div class="fade container">
+                      <img class="image" src="images/poster-chipster.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Chipter Poster</div>
+                      </div>
+                  </div>
+
+                  <div class="fade container">
+                      <img class="image" src="images/graphics-stars.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Graphic Designed</div>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="  container">
+                    <a href="#" target="_blank">
+                      <img class="image" src="images/image-web-Fineqaulitypaints-Website copy.jpg">
+                      <div class="overlay-img">
+                        <div class="text">www.Fineqaulitypaints.com</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="downloadable/brand.png">
+                    <div class="overlay-img">
+                      <div class="text">Graphic Designed</div>
+                    </div>
+                </div>
+
+                </div>
+                <div class="column">
+                  <div class="fade container">
+                    <img class="image" src="images/poster-lashes.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Lashes Poster</div>
+                    </div>
+                </div>
+                  <div class="fade container">
+                      <img class="image" src="images/logo-wave.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Wave Logo</div>
+                      </div>
+                  </div>
+                   
+                  <div class="fade container">
+                      <img class="image" src="images/logo-dsc.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Dad&Son Car Clinic Logo</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/graphic-cn.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Graphic Designed</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/poster-smoothie.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Mock Smoothie Post</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/graphics-stairs.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Graphic Designed</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/logo-craya.jpg">
+                      <div class="overlay-img">
+                        <div class="text">Crayators Logo</div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                    <a href="" target="_blank">
+                      <img class="image" src="images/web/jeremygill_insta.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/Giveaway_2_Hood_Wrap copy.png">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets IG Post Giveaway</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/Giveaway_2_Hood_Wrap_2 copy.png">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets IG Post Giveaway</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/gucci_closeup.png">
+                    <div class="overlay-img">
+                      <div class="text">Gucci Car Wrap Design</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/h-logo-google copy.png">
+                    <div class="overlay-img">
+                      <div class="text">House of Wrap Logo</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/house_of_wrap_500off_V4.jpg">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets IG Post Giveaway</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="downloadable/gqp.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Fine Quality Paints Logo</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="downloadable/truelifelogo.jpg">
+                    <div class="overlay-img">
+                      <div class="text">True Life Logo</div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div style="text-align:right; margin-left: 4px; margin-top:-4px;"class="row">
+                <a class="text-contact" href="contact.html"><p >contact to see more</p></a>
+              </div>
+            </div>
+            <h1 Style="margin-top:100px;" class="fade header-portfolio">Print</h1>
+            <div class="">
+              <div class=" row">
+
+                <div class=" column">
+                  <div class="fade container">
+                    <img class="image" src="images/digital decks/Swatches_PosterCoverPrint.jpg">
+                    <div class="overlay-img">
+                      <div class="text">House of Wrap Swatches Book PDF</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/Warranty_Card_Print.jpg">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets Warranty Cards</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/design/Warranty.jpg">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets Warranty Cards Print</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="fade container">
+                    <img class="image" src="images/print/ethiusLogo.jpg">
+                    <div class="overlay-img">
+                      <div class="text">Ethius Logo Patches</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/print/HowBookletCover.jpg">
+                    <div class="overlay-img">
+                      <div class="text">House of Wrap Booklet Front & Back</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/print/ThankYou_Card_Aftercare.jpg">
+                    <div class="overlay-img">
+                      <div class="text">House of Wrap Thank You Cards</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="fade container">
+                    <img class="image" src="images/print/Wrap_booklet_layout_forig2.jpg">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets Aftercare Booklet</div>
+                    </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="images/print/100_Print.png">
+                    <div class="overlay-img">
+                      <div class="text">@HundredThousandStreets Aftercare Booklet</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align:right; margin-left: 4px; margin-top:-4px;"class="row">
+                <a class="text-contact" href="contact.html"><p >contact to see more</p></a>
+              </div>
+            </div>
+            <h1 Style="margin-top:100px;" class="header-portfolio">Coded & Designed</h1>
+            <div class="">
+              <div class="row">
+                <div class="column">
+                  <div class="  container">
+                    <a href="https://hundredthousandstreets.com/contact.html" target="_blank">
+                      <img class="image" src="images/image-web-how.png">
+                      <div class="overlay-img">
+                        <div class="text">www.Hundredthousandstreets.com (Old Version)</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class=" container">
+                    <a href="http://cookbook-project-3.herokuapp.com/get_recipes" target="_blank">
+                      <img class="image" src="images/image-web-cookboook.png">
+                      <div class="overlay-img">
+                        <div class="text">A Virtual Cookbook</div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="fade container">
+                    <a href="https://issue-ticker.herokuapp.com/" target="_blank">
+                      <img class="image" src="images/image-web-issue.png">
+                      <div class="overlay-img">
+                        <div class="text">A Issue Ticker</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                    <a href="http://www.dscarclinic.ca/" target="_blank">
+                      <img class="image" src="images/web/crayators_instagram_2.png">
+                      <div class="overlay-img">
+                        <div class="text">www.Crayators.ca<br ><p style="font-size:10px;">(Yet To Be Launched)</p></div>
+                      </div>
+                    </a>
+                  </div>
+                 
+                  
+                </div>
+                <div class="column">
+                  <div class="fade container">
+                    <a href="http://thesofoundcompany.com/" target="_blank">
+                      <img class="image" src="images/web/sofound_forIG_Web.jpg">
+                      <div class="overlay-img">
+                        <div class="text">SoFound.com</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="  container">
+                    <a href="https://harmano.github.io/sofoundcompanywebsite/contact.html" target="_blank">
+                      <img class="image" src="images/image-sofound-site.jpg">
+                      <div class="overlay-img">
+                        <div class="text">www.thesofoundcompany.com (Older Version)</div>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <div class="fade container">
+                    <a href="#" target="_blank">
+                      <img class="image" src="images/web/pricecal_ig.jpg">
+                      <div class="overlay-img">
+                        <div class="text">HundredThousandStreets Price Calculator</div>
+                      </div>
+                    </a>
+                  </div>
+                  
+
+                </div>
+                <div class="column">
+                  <div class="  container">
+                    <a href="https://www.EthiusProtection.ca/" target="_blank">
+                      <img class="image" src="images/web/Eithus_Website_ForWeb copy.jpg">
+                      <div class="overlay-img">
+                        <div class="text">www.EthiusProtection.ca</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="  container">
+                    <a href="https://harmano.github.io/covid19099919-site-v1/" target="_blank">
+                      <img class="image" src="images/image-web-covid19.png">
+                      <div class="overlay-img">
+                        <div class="text">www.canadacovid19.org (discontinued 2020, link to github page)</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                    <a href="https://www.HundredThousandStreets.com/" target="_blank">
+                      <img class="image" src="images/web/houseofwrap_Web_ForIG.jpg">
+                      <div class="overlay-img">
+                        <div class="text">www.HundredThousandStreets.com<br ><p style="font-size:10px;"></p></div>
+                      </div>
+                    </a>
+                  </div>
+                   
+                  
+
+                  <div class="fade container">
+                    <a href="https://www.houseofwrap.com/" target="_blank">
+                      <img class="image" src="images/web/how_web_forIG.jpg">
+                      <div class="overlay-img">
+                        <div class="text">www.HouseofWrap.com</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div style="text-align:right; margin-left: 4px; margin-top:-4px;"class="row">
+                <a class="text-contact" href="contact.html"><p >contact to see more</p></a>
+              </div>
+            </div>
+             
+          <!--  <h1 Style="margin-top:100px;" class="header-portfolio">Film & Photo</h1>
+            <div class="">
+              <div class="row">
+                <div class="column">
+                  <div class="fade container">
+                    <a target="_blank" href="https://www.instagram.com/p/B9461OFBged/">
+                      <img class="image" src="images/Screen Shot 2020-05-28 at 11.43.19 AM.png">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/photo-d.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+
+                </div>
+                <div class="column">
+                  <div class="fade container">
+                    <a target="_blank" href="https://www.instagram.com/p/B9h0vt3BuGP/">
+                      <img class="image" src="images/Screen Shot 2020-05-28 at 11.43.27 AM.png">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/photo-camaro.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/photo-bin.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/photo-tree-2.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="fade container">
+                    <a target="_blank" href="https://www.instagram.com/p/B9461OFBged/">
+                      <img class="image" src="images/Screen Shot 2020-05-28 at 11.48.25 AM.png">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/photo-wall.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/care.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                      <img class="image" src="images/photo-tree.jpg">
+                      <div class="overlay-img">
+                        <div class="text"></div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            </div> -->
+
+            <h1 Style="margin-top:100px;" class="header-portfolio">Digital PDFs</h1>
+            <div class="">
+              <div class="row">
+                <div class="column">
+                  <div class="fade container">
+                    <img class="image" src="images/digital decks/Stealth copy.png">
+                    <div class="overlay-img">
+                      <a style="text-decoration: none; "class="text" download="100_Packages.pdf" href="downloadable/Packages.pdf" title="HundredThousandStreets">HundredThousandStreets Digital Packages<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                    </div>
+                </div>
+                  
+                  <div class="fade container">
+                    <img class="image" src="downloadable/HouseofWrap_Digital_DeckCover.jpg">
+                    <div class="overlay-img">
+                      <a target="_blank" style="text-decoration: none; "class="text" download="HouseofWrap_DigitalDeckalt.pdf" href="https://drive.google.com/file/d/1MTNw7DmAEeF7-7QAXXXgAVnrs8yQK-aL/view?usp=sharing" title="DigitalWindowCatalog">Digital Investor Pitch<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                    </div>
+                </div>
+                <div class="fade container">
+                    <div class="fade container">
+                      <img class="image" src="images/digital decks/thisisusPDF.png">
+                      <div class="overlay-img">
+                        <div class="text">HundredThousandStreets "This is Us" Digital Deck, contact for PDF</div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="column">
+                
+                  <div class="fade container">
+                    <img class="image" src="images/digital decks/HouseOfWrap_DigitalDeck_Cover.jpg">
+                    <div class="overlay-img">
+                      <a target="_blank" style="text-decoration: none; "class="text" download="DigitalDeck.pdf" href="https://drive.google.com/file/d/1OItyfeqEMDO43Rl_TzqPUtRj1xCvFWoI/view?usp=sharing" title="DigitalDeck">House of Wrap Digital Service Deck, Contact for PDF<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                    </div>
+                </div>
+                <div class="fade container">
+                  <img class="image" src="images/digital decks/House_of_Wrap_DQ_Interior_FinishesCover.jpg">
+                  <div class="overlay-img">
+                    <a target="_blank" style="text-decoration: none; "class="text" download="DigitalDeck.pdf" href="https://drive.google.com/file/d/1BAD6BerUeDJlIcel6B0974fdC86xcJGK/view?usp=sharing" title="DigitalDeck">Digital Interior Catalog Cover, Contact for PDF<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                  </div>
+              </div>
+                  
+                  
+                  <div class="fade container">
+                    <img class="image" src="images/digital decks/House_of_Wrap_BN_Interior_Finishes copy.jpg">
+                    <div class="overlay-img">
+                      <a target="_blank"  style="text-decoration: none; "class="text" download="DigitalSwatches.pdf" href="https://drive.google.com/file/d/1I7-JJqH1v__Abld5aUr0NgJWeW2DDd5U/view?usp=sharing" title="DigitalWindowCatalog">Digital Interior Catalog<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                    </div>
+                </div>
+                </div>
+
+                <div class="column">
+                  
+
+                  <div class="fade container">
+                      <img class="image" src="images/digital decks/House_of_Wrap_Window_CatalogCover.jpg">
+                      <div class="overlay-img">
+                        <a style="text-decoration: none; "class="text" download="WindowCatalog.pdf" href="downloadable/House_of_Wrap_Window_Catalog.pdf" title="DigitalWindowCatalog">Digital Window Catalog<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                      </div>
+                  </div>
+                  <div class="fade container">
+                    <img class="image" src="downloadable/HouseofWrap_PricingGuide_Cover.jpg">
+                    <div class="overlay-img">
+                      <a target="_blank" style="text-decoration: none; "class="text" download="HouseofWrap_PricingGuide.pdf" href="https://drive.google.com/file/d/1RVlciGGf4rHuPDIXZUreTO19Jzm0Gf9x/view?usp=sharing" title="DigitalWindowCatalog">Digital Pricing Guide<br><p style="font-size: 10px; margin-top:-3px !important;">click here to download</p></a>
+                    </div>
+                </div>
+                <div class="fade container">
+                  <img class="image" src="downloadable/truelife_Digitaldeck.jpg">
+                  <div class="overlay-img">
+                    <div class="text">True Life Client Pitch, contact for PDF</div>
+                  </div>
+                 </div>
+                   
+                </div>
+              </div>
+
+            </div>
+            <hr style="padding-top:400px; opacity: 0;">
+        </div>
+
+    </div>
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+  </body>
+  <!-- Link to page ===================================================================== -->
+  <a href="index.html"      class="link-to-portfolio hover-target" target=”_blank”></a>
+  <script src="script.js" charset="utf-8"></script>
+</html>
