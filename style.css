@@ -1,7 +1,23 @@
 .uofttext {
 	letter-spacing: 20;
+
+	
 }
- 
+.uofttext{
+	 font-weight: 300;
+	 position: absolute; 
+	 bottom: 18px; 
+	 padding-left: 18px;
+
+ }
+
+ .switch-wrap .textdesgin{
+	font-weight: 500;
+}
+.hrmain{
+	width: 30px;
+	margin-bottom: 30px;;
+}
 .overlay-img {
   position: absolute;
   top: 0;
@@ -175,7 +191,7 @@ a:hover {
 	overflow: ;
 }
 .full-height {
-	height: 100vh;
+	height: 96vh;
 }
 
 /* #Navigation
