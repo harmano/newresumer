@@ -36,9 +36,10 @@
 .contact-text{
   text-decoration: none;
   color:black;
+  animation-duration: 1s;
 }
 .contact-text:hover{
-  font-weight: 600;
+  font-weight: 400;
 
 }
 .overlay-img:hover {
