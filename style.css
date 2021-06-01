@@ -845,3 +845,12 @@ body.light .switch-wrap p span:nth-child(1):before {
 		
 	}
   }
+
+
+  .hide {
+	display: none;
+  }
+	  
+  .myDIV:hover + .hide {
+	display: block;
+  }
