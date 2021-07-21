@@ -11,7 +11,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <style>
 
+        #myDIV {
+          display: none;
+
+        }
+
+        button{
+          color: black;
+          border-radius: 3px;
+          padding: 4px 15px;
+          transition: 0.3s;
  
+          text-decoration: underline;
+          margin-left: -13px;
+          font-weight: 400;
+          font-size: 14px;
+        }
+
+        button:hover{
+          font-weight: 400;
+       
+        }
+        .click-here-p{
+          font-size: 13px;
+        }
     </style>
   
   
@@ -56,14 +79,20 @@
             </p>
           </a>--> 
           <a class="contact-text" target="_blank" href="mailto:contact@theharmanbrar.com"><p><i style="margin-right:20px; " class="fas fa-envelope"></i > contact@theharmanbrar.com</p></a>
-          <a class="contact-text" target="_blank" href="https://www.google.com/maps/place/97+Bayhampton+Dr,+Brampton,+ON+L6P+3A8/data=!4m2!3m1!1s0x882b3d414bcb6d53:0x7d67a87f2faf84ad?sa=X&ved=2ahUKEwiFtKzqs9LpAhVYqp4KHXT8BocQ8gEwAHoECAwQAQ"><p><i style="margin-left:3px; margin-right:23px;" class="fas fa-map-pin"></i> Brampton, Ontario</p></a>
+          <a class="contact-text" href="#"><p><i style="margin-left:3px; margin-right:23px;" class="fas fa-map-pin"></i> Toronto, Ontario</p></a>
           <a class="contact-text" target="_blank" href="https://www.github.com/harmano/harmano"><p><i style=" margin-right:20px;" class="fab fa-github"></i > Github </p></a>
-          <hr style="width:100%; margin-top:30px; opacity:.3; ">
-          <p style="opacity:.5;">References:</p>
-          <p style="margin-left: 15px; opacity:.5;">Sundeep Thindh CEO at The House of Wrap Limited : 647-795-6275</p>
-          <p style="margin-left: 15px; opacity:.5;">Tj Grewal Account Director at Ethius Protection Inc: (289) 946-2112  </p>
-          <p style="margin-left: 15px; opacity:.5;">Chris Fernando former COO at True Life Investments Inc: (647) 869-6456  </p>
-          <!--<p style="margin-left: 15px; opacity:.5;">The SoFound Company (Team Lead) - Paul Sidhu: team@thesofound.com </p>-->
+          <a class="contact-text" onclick="myFunction()"><p><i style=" margin-right:20px;" class="far fa-smile-beam"></i > References<i class="click-here-p"> (click here)</i></p></a>
+
+          <div id="myDIV">
+            <hr style="width:100%; margin-top:10px; opacity:.3; ">
+            <p style="opacity:.5;">References:</p>
+            <p style="margin-left: 15px; opacity:.5;">Sundeep Thindh CEO at The House of Wrap Limited : 647-795-6275</p>
+            <p style="margin-left: 15px; opacity:.5;">Tj Grewal Account Director at Ethius Protection Inc: (289) 946-2112  </p>
+            <p style="margin-left: 15px; opacity:.5;">Chris Fernando former COO at True Life Investments Inc: (647) 869-6456  </p>
+            <!--<p style="margin-left: 15px; opacity:.5;">The SoFound Company (Team Lead) - Paul Sidhu: team@thesofound.com </p>-->
+            <hr style="width:100%; margin-top:10px; opacity:.3; ">
+          </div>
+          
            
       </div>
     </div>
@@ -75,4 +104,14 @@
   <!-- Link to page ===================================================================== -->
   <a href="index.html"      class="link-to-portfolio hover-target" target=”_blank”></a>
   <script src="script.js" charset="utf-8"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </html>
