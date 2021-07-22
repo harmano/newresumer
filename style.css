@@ -68,6 +68,7 @@
 .container {
   position: relative;
   width: 100%;
+  display: none; /* Hide all elements by default */
 }
 .containter-portfolio222{
 	top: 100px;
@@ -150,13 +151,23 @@ a:hover {
 	background: rgba(255,255,255,1);
 	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
-
+.navShadow{
+	z-index: 100;
+	box-shadow: inset -50px 0px 20px -33px #000000;
+	-webkit-box-shadow: inset -50px -0px 35px -38px #d6d6d6;
+	-moz-box-shadow: inset -50px -0px 20px -33px #000000;
+	-o-box-shadow: inset -50px -0px 20px -33px #000000;
+  }
 @media screen and (max-width: 1200px){
 	.cursor,.cursor2,.cursor3{
 		display: none
 	}
+
 	
 }
+
+
+
 .image-port-hover{
   position: absolute;
   top: 0;
@@ -796,6 +807,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 		margin-top: 90px !important;
 		padding-left: 5px;
 	  }
+	  
 }
 
 @media only screen and (max-width: 600px) {
@@ -844,6 +856,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 		max-width: 960px;
 		
 	}
+	
   }
 
 
@@ -854,3 +867,41 @@ body.light .switch-wrap p span:nth-child(1):before {
   .myDIV:hover + .hide {
 	display: block;
   }
+
+  .container_portfolioNav {    
+	display: flex;    
+	overflow-x: auto;
+	white-space: nowrap;
+	padding: 13px 0px;
+	z-index: 0;
+
+	width: 100%;
+
+
+  }
+
+  @media screen and (min-width: 600px){
+	
+	.container_portfolioNav {    
+		display: flex;    
+		overflow-x: auto;
+		white-space: nowrap;
+		padding: 13px 0px;
+		z-index: 0;
+	
+		width: 77%;
+	
+	
+	  }
+	  
+	
+}
+
+  @media screen and (min-width: 1500px){
+	.navShadow{
+		z-index: 100;
+		box-shadow: none;
+	  }
+
+	
+}
