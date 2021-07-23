@@ -23,7 +23,11 @@
         padding: 0 4px;
       }
     
-      
+      #myDIV {
+          display: none;
+
+        }
+
       img{
         width:100%; 
         scale: 5; 
@@ -77,11 +81,7 @@
   <!-- Header ===================================================================== -->
   <header class="cd-header">
     <div class="header-wrapper">
-      <div class="logo-wrap">
-
-
-        <a style="text-shadow: 1px 1px 1px black;" href="#" class="hover-target">About</a>
-      </div>
+     
 
       <div class="nav-but-wrap">
         <div class="menu-icon hover-target">
@@ -92,6 +92,9 @@
       </div>
     </div>
   </header>
+  <div class="logo-wrap">
+    <a style="" href="#" class="hover-target title-text-portfoilo">About</a>
+  </div>
   <!-- Nav ===================================================================== -->
   <div style="margin-top:-15px;" class="nav">
     <div class="nav__content">
@@ -120,9 +123,15 @@
         <p>With my education in marketing, design and software I understand the need for aesthetically appealing marketing campaigns, and that an effective design combined with application speed, security and reliability combine to create a great user experience.</p>
         <p>I have also designed and written copyright for numerous booklets and digital decks, that are effective in conveying their intended message, but are also visually appealing. Apart from designing, I have experience in filming and directing visuals for marketing campaigns and creative shoots. </p>
         <p>I have the unique asset of having both vast experience and education in business management, marketing, graphic design and software development, allowing me to seamlessly work across the stack. I work quickly and effectively in getting things built and working across the stack. I'm an excellent communicator who thrives with bright and enthusiastic teams, however I'm also a self starter when working solo.</p>
+        
+        <div class="row margin-top-resume">
+          <button class="view-resume"><a onclick="myFunction()" onClick="document.getElementById('middle').scrollIntoView();"> View Resume</a></button>
+          <button class="download"><a href="downloadable/HarmanBrar_CV.pdf" download> Download CV</a></button>
+        </div>
+      <div id="myDIV"  class="">
         <div class="">
          <hr style="width:100%; margin-top:30px; opacity:.3; ">
-         <p style="opacity:.7; font-size: 16px; font-weight: 900;"><b>Education</b></p>
+         <p style="opacity:.7; font-size: 16px; font-weight: 900;" ><b>Education</b></p>
           <p style="opacity:.5; font-weight: 500; "> Bachelor of Business Administration, Management (Graduated with Distinction)</p>
           <p style="margin-left: 15px; opacity:.5; margin-top:-8px; font-weight: 300;">University of Toronto (2013 - 2017) </p>
           <p style="padding-left:20px; margin-left: 15px; opacity:.5; margin-top:-13px; font-weight: 300; font-style: italic;" >Relevant Coursework: Finance, Business Law, Marketing, Human Resources Management, Operations Management, Organizational Behavior and Accounting</p>
@@ -272,9 +281,14 @@
               <li style=" opacity:.5;">Designed and executed numerous social media marketing campaigns, for both print and digital</li>
               <li style=" opacity:.5;">Worked with: Ethius Protection Services, Upshelf.ai, Fine Quality Paints, Merge Painting, The Sofound Company, DS Car Clinic, Crayators Inc and more</li>
             </ul>
+            
          </div>
+         
       </div>
+      <div class="row" style="padding-top:200px"></div>
+
     </div>
+  </div>
 
 
 
@@ -287,4 +301,14 @@
   <!-- Link to page ===================================================================== -->
   <a href="index.html"      class="link-to-portfolio hover-target" target=”_blank”></a>
   <script src="script.js" charset="utf-8"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </html>

@@ -151,19 +151,20 @@ a:hover {
 	background: rgba(255,255,255,1);
 	box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
-.navShadow{
-	z-index: 100;
-	box-shadow: inset -50px 0px 20px -33px #000000;
-	-webkit-box-shadow: inset -50px -0px 35px -38px #d6d6d6;
-	-moz-box-shadow: inset -50px -0px 20px -33px #000000;
-	-o-box-shadow: inset -50px -0px 20px -33px #000000;
-  }
+
 @media screen and (max-width: 1200px){
 	.cursor,.cursor2,.cursor3{
 		display: none
 	}
 
-	
+	.navShadow{
+		z-index: 100;
+		box-shadow: inset -50px 0px 20px -33px #000000;
+		-webkit-box-shadow: inset -50px -0px 35px -38px #d6d6d6;
+		-moz-box-shadow: inset -50px -0px 20px -33px #000000;
+		-o-box-shadow: inset -50px -0px 20px -33px #000000;
+		
+	  }
 }
 
 
@@ -337,11 +338,14 @@ a:hover {
 	text-align: center;
 
 }
+
+
 .nav__list {
 	position: relative;
 	padding: 0;
 	margin: 0;
 	z-index: 2;
+
 }
 .nav__list-item {
 	position: relative;
@@ -365,6 +369,7 @@ a:hover {
 	transition: opacity .2s ease, transform .3s ease, -webkit-transform .3s ease;
 	margin-top: 0;
 	margin-bottom: 0;
+	
 }
 .nav__list-item a{
 	position: relative;
@@ -379,7 +384,9 @@ a:hover {
 	display: inline-block;
 	text-transform: uppercase;
     -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
+	transition: all 200ms linear;
+	margin-right: 3%;
+	
 }
 .nav__list-item a:after{
 	position: absolute;
@@ -390,7 +397,7 @@ a:hover {
 	width: 0;
 	height: 0;
 	opacity: 0;
-	background-color:  #e6e600;
+	background-color:  rgb(0, 0, 0);
 	z-index: 1;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
@@ -912,7 +919,7 @@ font-size: 12px;
 
   @media screen and (min-width: 1500px){
 	.navShadow{
-		z-index: 100;
+		z-index: 0;
 		box-shadow: none;
 	  }
 
@@ -920,16 +927,51 @@ font-size: 12px;
 }
 
 
+.margin-top-resume{
+	margin-top: 20px;
+}
+.download{
+	background-color: black;
+	border-radius: 3px;
+	color: white;
+	padding: 4px 13px;
+	border: none;
+	transition: .35s ease;
+}
+.download:hover{
+	background-color: rgb(109, 109, 109);
+}
+
+.download a{
+	color:white;
+	text-decoration: none;
+}
 
 
+.view-resume{
+	background-color: black;
+	border-radius: 3px;
+	color: white;
+	padding: 4px 13px;
+	border: none;
+	transition: .35s ease;
+	margin-right: 5px;
+	margin-left: -5px;
+}
+.view-resume:hover{
+	background-color: rgb(109, 109, 109);
+}
+
+.view-resume a{
+	color:white;
+	text-decoration: none;
+}
 .date-jobs{
 	float:none; 
 	font-size: 10px;
 }
 
-.margin-top-resume{
-	margin-top: 20px;
-}
+.
 
   @media screen and (min-width: 600px)  {
 	.mobile-break { display: none; }
@@ -938,3 +980,25 @@ font-size: 12px;
 		font-size: 12px;
 	}
 }
+@media screen and (max-width: 1500px){
+
+
+	.navShadow{
+		z-index: 100;
+		box-shadow: inset -50px 0px 20px -33px #000000;
+		-webkit-box-shadow: inset -50px -0px 35px -38px #d6d6d6;
+		-moz-box-shadow: inset -50px -0px 20px -33px #000000;
+		-o-box-shadow: inset -50px -0px 20px -33px #000000;
+		
+	  }
+}
+
+.title-text-portfoilo{
+	text-shadow: 1px 1px 1px black; 
+	position: fixed;
+	top: 10;
+	padding-left: 50px;
+	width: 100%;
+	z-index: 1;
+}
+ 
