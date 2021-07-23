@@ -893,8 +893,21 @@ body.light .switch-wrap p span:nth-child(1):before {
 	
 	
 	  }
-	  
+	  .switch-wrap-body {
+		position: absolute;
+		top: 10%;
+		margin-right: 20%;
+		margin-left: 20%;
+		max-width: 960px;
+		padding-right: auto;
+		padding-left: %;
+	}
+
 	
+	
+}
+
+font-size: 12px;
 }
 
   @media screen and (min-width: 1500px){
@@ -904,4 +917,24 @@ body.light .switch-wrap p span:nth-child(1):before {
 	  }
 
 	
+}
+
+
+
+
+.date-jobs{
+	float:none; 
+	font-size: 10px;
+}
+
+.margin-top-resume{
+	margin-top: 20px;
+}
+
+  @media screen and (min-width: 600px)  {
+	.mobile-break { display: none; }
+	.date-jobs{
+		float:right; 
+		font-size: 12px;
+	}
 }
