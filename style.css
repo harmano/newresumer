@@ -735,10 +735,10 @@ body.light .switch-wrap p span:nth-child(1):before {
     width: 60px;
     height: 60px;
 	text-align: center;
-	margin: 0px;
+	margin-bottom: 10px;
 	padding: 0px;
-	margin-right: 23px;
-	opacity: .6;
+	margin-right: 28px;
+	opacity: 1;
 	
 
 	transition: .35s ease;
@@ -1066,12 +1066,12 @@ font-size: 12px;
 		z-index: 1;
 	}
 	.navLogo {
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px;
 		text-align: center;
-		margin: 0px;
 		padding: 9px;
-		margin-bottom: 8px;
+		margin-bottom: 0px;
+		margin-right: 15px;
 
 	
 		
