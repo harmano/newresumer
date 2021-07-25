@@ -329,11 +329,11 @@ a:hover {
 .nav__content {
 	position: fixed;
 	visibility: hidden;
-	top: 50%;
+	top: 47%;
 
 	margin-top: 20px;
 	-webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
 	width: 100%;
 	text-align: center;
 
@@ -408,6 +408,8 @@ a:hover {
 	left: 0;
 	width: 100%;
 }
+
+
 .nav__list-item a:hover{
 	color: rgba(255,255,255,1);
 }
@@ -602,6 +604,7 @@ body.nav-active .nav:after {
   .switch-wrap h1 {
     font-size: 32px;
   }
+  
 }
 .switch-wrap p {
 	font-weight: 600;
@@ -723,14 +726,47 @@ body.light .switch-wrap p span:nth-child(1):before {
 	opacity: 0;
 }
 
-/* #Link to page
-================================================== */
+/* Nav Logo ================================================== */
+
+
+
+
+.navLogo {
+    width: 60px;
+    height: 60px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	margin-right: 23px;
+	opacity: .6;
+	
+
+	transition: .35s ease;
+
+	
+}
+.cirleBorder {
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+	border: 1px solid rgb(0, 0, 0);
+	padding: 10px;
+	border-radius: 50%;
+	margin: 1px;
+	margin-bottom: 15px;
+
+	opacity: .4;
+}
+
+.navLogo:hover{
+	opacity: .5;
+	filter: blur(1px);
+}
 
 .link-to-portfolio {
 	position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 200;
+    z-index: 2;
     cursor: pointer;
     width: 60px;
     height: 60px;
@@ -745,7 +781,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 
 }
 .link-to-portfolio-2 {
-	  position: fixed;
+	position: fixed;
     bottom: 40px;
     right: 50px;
     z-index: 200;
@@ -827,7 +863,6 @@ body.light .switch-wrap p span:nth-child(1):before {
 		margin-top: 90px !important;
 		padding-left: 5px;
 	  }
-	  
 	 
 	body {
 	  background-color:green;
@@ -843,7 +878,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 	.container-portfolio{
 		top: 10px;
 		width: 80%;
-		padding-left: 10px;
+		padding-left: 0px;
 	  }
 
 	  .letterspacing{
@@ -880,7 +915,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 	overflow-x: auto;
 	white-space: nowrap;
 	padding: 13px 0px;
-	z-index: 0;
+	z-index: -1;
 
 	width: 100%;
 
@@ -894,7 +929,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 		overflow-x: auto;
 		white-space: nowrap;
 		padding: 13px 0px;
-		z-index: 0;
+		z-index: -1;
 	
 		width: 77%;
 	
@@ -909,6 +944,8 @@ body.light .switch-wrap p span:nth-child(1):before {
 		padding-right: auto;
 		padding-left: %;
 	}
+
+
 
 	
 	
@@ -979,12 +1016,13 @@ font-size: 12px;
 		float:right; 
 		font-size: 12px;
 	}
+
 }
 @media screen and (max-width: 1500px){
 
 
 	.navShadow{
-		z-index: 100;
+		z-index: 1;
 		box-shadow: inset -50px 0px 20px -33px #000000;
 		-webkit-box-shadow: inset -50px -0px 35px -38px #d6d6d6;
 		-moz-box-shadow: inset -50px -0px 20px -33px #000000;
@@ -1002,3 +1040,44 @@ font-size: 12px;
 	z-index: 1;
 }
  
+
+.contact-margin-top{
+	margin-top: 50%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+	.contact-margin-top{
+		margin-top: 0%;
+	}
+	
+	.header-wrapper{
+		position: relative;
+		width: calc(100% - 100px);
+		margin-left: 75px;
+	}
+	.title-text-portfoilo{
+		text-shadow: 1px 1px 1px black; 
+		position: fixed;
+		top: 10;
+		padding-left: 25px;
+		width: 100%;
+		z-index: 1;
+	}
+	.navLogo {
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		margin: 0px;
+		padding: 9px;
+		margin-bottom: 8px;
+
+	
+		
+	}
+	.cirleBorder {
+		border: 1px solid rgb(0, 0, 0);
+
+	}
+  }
