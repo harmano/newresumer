@@ -909,9 +909,11 @@ body.light .switch-wrap p span:nth-child(1):before {
 	overflow-x: auto;
 	white-space: nowrap;
 	padding: 13px 0px;
-	z-index: -1;
+
 
 	width: 100%;
+
+	z-index: 1;
 
 
   }
@@ -923,7 +925,8 @@ body.light .switch-wrap p span:nth-child(1):before {
 		overflow-x: auto;
 		white-space: nowrap;
 		padding: 13px 0px;
-		z-index: -1;
+	
+		z-index: 1;
 	
 		width: 77%;
 	
